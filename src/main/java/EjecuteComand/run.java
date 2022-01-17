@@ -6,12 +6,15 @@ import java.io.InputStreamReader;
 public class run {
 
         public static void main(String[] args) throws Exception {
+            ProcessBuilder python = new ProcessBuilder(
+                    "cmd.exe", "/c", "Python");
             ProcessBuilder flask = new ProcessBuilder(
                     "cmd.exe", "/c", "pip install Flask");
             ProcessBuilder pywhatkit = new ProcessBuilder(
                     "cmd.exe", "/c", "pip install pywhatkit");
             ProcessBuilder builder = new ProcessBuilder(
                     "cmd.exe", "/c", "Python src/main/java/service/util/main.py");
+            python.redirectErrorStream(true) ;
             builder.redirectErrorStream(true);
             flask.redirectErrorStream(true);
             pywhatkit.redirectErrorStream(true);
