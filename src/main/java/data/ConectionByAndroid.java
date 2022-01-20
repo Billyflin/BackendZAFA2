@@ -36,10 +36,12 @@ public class ConectionByAndroid extends ConectionData {
             connection.close();
         }
     }
+
     public ResultSet leerTablaUsuarios() throws SQLException {
         QUERY = "SELECT * FROM prueba1.";
         return statement.executeQuery(QUERY);
     }
+
     public void crearUsuario(Usuario usuario) throws SQLException {
         QUERY = "INSERT INTO usuarios (id, rut, nombre, apellido, correo, numero) VALUES (?,?,?,?,?,?)";
         preparedStatement = connection.prepareStatement(QUERY);

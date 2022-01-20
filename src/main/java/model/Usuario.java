@@ -8,7 +8,7 @@ public class Usuario {
     private String correo;
     private String numero;
 
-    public Usuario(String id,String rut, String nombre, String apellido, String correo,String numero) {
+    public Usuario(String id, String rut, String nombre, String apellido, String correo, String numero) {
         this.id = id;
         this.rut = rut;
         this.nombre = nombre;

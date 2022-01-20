@@ -1,4 +1,4 @@
-package interfaces;
+package interfaz;
 
 import java.sql.SQLException;
 

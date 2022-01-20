@@ -1,6 +1,6 @@
 package data;
 
-import interfaces.Conection;
+import interfaz.Conection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
