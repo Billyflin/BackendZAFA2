@@ -7,7 +7,7 @@ public class run {
 
         public static void main(String[] args) throws Exception {
             ProcessBuilder python = new ProcessBuilder(
-                    "cmd.exe", "/c", "Python");
+                    "cmd.exe", "/c", "python");
             ProcessBuilder flask = new ProcessBuilder(
                     "cmd.exe", "/c", "pip install Flask");
             ProcessBuilder pywhatkit = new ProcessBuilder(
