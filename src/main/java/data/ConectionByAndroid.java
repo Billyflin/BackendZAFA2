@@ -38,12 +38,12 @@ public class ConectionByAndroid extends ConectionData {
     }
 
     public ResultSet leerTablaUsuarios() throws SQLException {
-        QUERY = "SELECT * FROM prueba1.";
+        QUERY = "SELECT * FROM prueba1.usuarios";
         return statement.executeQuery(QUERY);
     }
 
     public void crearUsuario(Usuario usuario) throws SQLException {
-        QUERY = "INSERT INTO usuarios (id, rut, nombre, apellido, correo, numero) VALUES (?,?,?,?,?,?)";
+        QUERY = "INSERT INTO prueba1.usuarios ( 'id', 'rut', 'nombre', 'apellido', 'correo', 'numero') VALUES (?,?,?,?,?,?)";
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, usuario.getId());
         preparedStatement.setString(2, usuario.getRut());
@@ -54,7 +54,7 @@ public class ConectionByAndroid extends ConectionData {
     }
 
     public ResultSet buscarUsuarioPorID(String id) throws SQLException {
-        QUERY = "SELECT * FROM Prueba1.usuarios WHERE id = ?";
+        QUERY = "SELECT * FROM prueba1.usuarios WHERE id = ?";
         preparedStatement = connection.prepareStatement(QUERY);
         preparedStatement.setString(1, id);
         return preparedStatement.executeQuery();
